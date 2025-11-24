@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components/native';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { theme } from './src/styles/theme';
-import AppNavigator from './src/navigation/AppNavigator';
 import { AuthProvider } from './src/context/AuthContext';
 import { AppSettingsProvider } from './src/context/AppSettingsContext';
 
@@ -26,7 +25,6 @@ export default function App() {
           <AuthProvider>
             <AppSettingsProvider>
               <StatusBar style="auto" />
-              <AppNavigator />
             </AppSettingsProvider>
           </AuthProvider>
         </QueryClientProvider>
